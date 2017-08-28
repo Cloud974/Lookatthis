@@ -22,8 +22,8 @@ source 'https://rubygems.org'
  gem 'jquery-rails'
  gem 'turbolinks', '~> 5'
  gem 'jbuilder', '~> 2.5'
-
  gem 'thor', '0.19.1'
+ gem 'pry-rails'
 
  group :development do
    gem 'listen', '~> 3.0.5'
@@ -35,4 +35,3 @@ source 'https://rubygems.org'
  end
 
  gem 'bootstrap-sass'
- 
