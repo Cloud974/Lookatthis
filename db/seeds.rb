@@ -16,6 +16,16 @@ posts = Post.all
   )
 end
 
+Post.find_or_create_by!(
+  title: "This is IDEMPOTENCE",
+  body: "This is the body that goes along with it"
+)
+
+Comment.find_or_create_by!(
+  post: Post.find(101),
+  body: "This is also IDEMPOTENCE"
+)
+
 puts "Seed Finished"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
