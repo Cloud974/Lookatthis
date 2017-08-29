@@ -23,7 +23,7 @@ source 'https://rubygems.org'
  gem 'turbolinks', '~> 5'
  gem 'jbuilder', '~> 2.5'
  gem 'thor', '0.19.1'
- gem 'pry-rails'
+ gem 'better_errors', '2.3.0'
 
  group :development do
    gem 'listen', '~> 3.0.5'
