@@ -36,3 +36,6 @@ source 'https://rubygems.org'
  end
 
  gem 'bootstrap-sass'
+
+ # Password encryption
+ gem 'bcrypt'
