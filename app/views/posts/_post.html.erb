@@ -1,0 +1,17 @@
+<div class="media">
+  <div class="media-body">
+    <h4 class="media-heading">
+      <%= link_to post.title, [@topic, post] %>
+    </h4>
+    <small>
+      posted <%= time_ago_in_words(post.created_at) %> ago by <%= post.user.name %>
+      <% if user_is_authorized_for_post?(post) %>
+        <%= link_to "Delete", [@topic, post], method: :delete %>
+      <% end %>
+    </small>
+    <p><%= post.body %></p>
+    <small>
+      <%= post.comments.count %> Comments
+    </small>
+  </div>
+</div>

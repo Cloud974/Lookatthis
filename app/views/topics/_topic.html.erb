@@ -1,0 +1,11 @@
+<div class="media">
+  <div class="media-body">
+    <h4 class="media-heading">
+      <%= link_to topic.name, topic %>
+    </h4>
+    <p><%= topic.description %></p>
+    <small>
+      <%= topic.posts.count %> Posts
+    </small>
+  </div>
+</div>
