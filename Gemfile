@@ -39,3 +39,6 @@ source 'https://rubygems.org'
 
  # Password encryption
  gem 'bcrypt'
+
+ # Environment Variables
+ gem 'figaro', '1.0'

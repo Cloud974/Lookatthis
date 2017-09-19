@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170914211953) do
+ActiveRecord::Schema.define(version: 20170919013338) do
+
+  create_table "adverisements", force: :cascade do |t|
+    t.string "title"
+    t.text "copy"
+    t.integer "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "advertisements", force: :cascade do |t|
+    t.string "title"
+    t.text "copy"
+    t.integer "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "comments", force: :cascade do |t|
     t.text "body"
@@ -20,6 +36,15 @@ ActiveRecord::Schema.define(version: 20170914211953) do
     t.integer "user_id"
     t.index ["post_id"], name: "index_comments_on_post_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "post_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_favorites_on_post_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -32,6 +57,24 @@ ActiveRecord::Schema.define(version: 20170914211953) do
     t.float "rank"
     t.index ["topic_id"], name: "index_posts_on_topic_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.boolean "resolved"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sponsored_posts", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.integer "price"
+    t.integer "topic_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["topic_id"], name: "index_sponsored_posts_on_topic_id"
   end
 
   create_table "topics", force: :cascade do |t|
