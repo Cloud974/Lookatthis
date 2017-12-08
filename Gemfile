@@ -43,3 +43,5 @@ source 'https://rubygems.org'
 
  # Environment Variables
  gem 'figaro', '1.0'
+
+ gem 'faker'

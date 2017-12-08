@@ -10,7 +10,7 @@
        <% end %>
        <div class="media-body">
          <h2 class="media-heading"><%= @user.name %></h2>
-         <small>
+         <small class="sub-script">
            <%= pluralize(@user.posts.count, 'post') %>,
            <%= pluralize(@user.comments.count, 'comment') %>
          </small>

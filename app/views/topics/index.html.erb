@@ -5,12 +5,14 @@
      <% @topics.each do |topic| %>
        <div class="media">
          <div class="media-body">
-           <h4 class="media-heading">
+           <h4 class="media-heading topic-title">
              <%= link_to topic.name, topic %>
            </h4>
-           <small>
-             <%= topic.description %>
-           </small>
+           <div class="sub-content-div">
+             <small class="sub-script" class="topic-description">
+               <%= topic.description %>
+             </small>
+           </div>
          </div>
        </div>
      <% end %>
