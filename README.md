@@ -33,11 +33,11 @@ connected to the view:
 
 rendering or obscuring:
 
-![post buttons](/app/assets/images/post-buttons.jpg)
+![post buttons](/app/assets/images/postbuttons.jpg)
 
 Of course, posts should be ordered by relevance, as well. so the rank  implemented in the post model works against a post's vote status-
 
-![vote buttons](/app/assets/images/vote-buttons.jpg)
+![vote buttons](/app/assets/images/votebuttons.jpg)
 
  over that post's lifetime-
 
